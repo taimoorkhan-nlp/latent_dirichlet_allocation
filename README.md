@@ -33,36 +33,7 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 
 ## Sample input and output
 - sample input data is given in `data/input-data.txt`
--------------------------------------------
-| Input dataset |
-||Wall St. Bears Claw Back Into the Black (Reuters) Reuters - Short-sellers, Wall Street's dwindling\band of ultra-cynics, are seeing green again.|
-|Carlyle Looks Toward Commercial Aerospace (Reuters) Reuters - Private investment firm Carlyle Group,\which has a reputation for making well-timed and occasionally\controversial plays in the defense industry, has quietly placed\its bets on another part of the market.|
-|Oil and Economy Cloud Stocks' Outlook (Reuters) Reuters - Soaring crude prices plus worries\about the economy and the outlook for earnings are expected to\hang over the stock market next week during the depth of the\summer doldrums.|
-|Iraq Halts Oil Exports from Main Southern Pipeline (Reuters) Reuters - Authorities have halted oil export\flows from the main pipeline in southern Iraq after\intelligence showed a rebel militia could strike\infrastructure, an oil official said on Saturday.|
-|Oil prices soar to all-time record, posing new menace to US economy (AFP) AFP - Tearaway world oil prices, toppling records and straining wallets, present a new economic menace barely three months before the US presidential elections.|
-|Stocks End Up, But Near Year Lows (Reuters) Reuters - Stocks ended slightly higher on Friday\but stayed near lows for the year as oil prices surged past #36;46\a barrel, offsetting a positive outlook from computer maker\Dell Inc. (DELL.O)|
-|Money Funds Fell in Latest Week (AP) AP - Assets of the nation's retail money market mutual funds fell by #36;1.17 billion in the latest week to #36;849.98 trillion, the Investment Company Institute said Thursday.|
-|...|
+- sample putput data is given in `data/output-data/document-topic-distribution.txt` and `data/output-data/topic-word-distribution.txt`
 
-- sample putput data
-**Topics per Document**
---------------------------------------
-|Document| Topic | Probability |
-|Document  0 | Topic  0 | 0.043478260869565216 | 	
-|            | Topic  1 | 0.9565217391304348  |
-|Document  1 | Topic  0 | 0.05263157894736842 | 	
-|            | Topic  1 | 0.9473684210526315 | 	
-| ...           |   ...    | ... |
---------------------------------------
-
-**Words per Topic**
---------------------------------------
-|Topic | word | Probability |
-|Topic 0 | wall | 0.008926527809567406 | 	
-|            | st. | 0.00434882124055848  |
-|Document  1 | bears | 0.00434882124055848 | 	
-|            | claw | 0.00434882124055848 | 	
-| ...           |   ...    | ... |
--------------------------------------
 ## Contact details
-M. Taimoor Khan (taimoor.nlp@gmail.com)
+M. Taimoor Khan (taimoor.khan@gesis.org)
