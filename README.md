@@ -10,7 +10,7 @@ The method implements latent dirichlet allocation (LDA) in specific with collaps
 topic modeling, latent dirichlet allocation, LDA
 
 ## Use case
-- Social scientist examining the dynamics of political poll reviews to gain nuanced insights into voter interests.
+Social scientist examining the dynamics of political poll reviews to gain nuanced insights into voter interests.
 
 ## Structure
 - `data/` 
