@@ -29,7 +29,7 @@ Social scientist examining the dynamics of political poll reviews to gain nuance
 
 ## Environment setup
 As it is vanilla implementation of the latent dirichlet allocation technique with everything built from scratch. 
-- `Setup the environment using requirements.txt`
+- Setup the environment using `requirements.txt` through command `pip install -r requirements.txt`
 - `Put your data in /data/input-data.txt`
 - Execute the first notebook `prepare-data.ipynb` to transform the data into integer encoding
 - Execute the main notebook `LDA-collapsed-gibbs-sampling.ipynb` to get results 
