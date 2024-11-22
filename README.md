@@ -54,6 +54,7 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 
 
 - sample putput data is given in `data/output-data/document-topic-distribution.txt`
+  
 | Document   | Topic 0                 | Topic 1                 |
 |------------|-------------------------|-------------------------|
 | Document 0 | 0.6666666666666666      | 0.3333333333333333      |
