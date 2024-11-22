@@ -53,7 +53,32 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 | Stocks ended slightly higher on Friday but stayed near lows for the year as oil prices surged past barrel. |
 
 
-- sample putput data is given in `data/output-data/document-topic-distribution.txt` and `data/output-data/topic-word-distribution.txt`
+- sample putput data is given in `data/output-data/document-topic-distribution.txt`
+| Document   | Topic 0                 | Topic 1                 |
+|------------|-------------------------|-------------------------|
+| Document 0 | 0.6666666666666666      | 0.3333333333333333      |
+| Document 1 | 0.5714285714285714      | 0.42857142857142855     |
+| Document 2 | 0.8333333333333334      | 0.16666666666666666     |
+| Document 3 | 0.8333333333333334      | 0.16666666666666666     |
+| Document 4 | 0.8571428571428571      | 0.14285714285714285     |
+| Document 5 | 0.125                   | 0.875                   |
+| Document 6 | 0.125                   | 0.875                   |
+| Document 7 | 0.25                    | 0.75                    |
+| Document 8 | 0.25                    | 0.75                    |
+| Document 9 | 0.6                     | 0.4                     |
+| Document 10| 0.5714285714285714      | 0.42857142857142855     |
+| Document 11| 0.7142857142857143      | 0.2857142857142857      |
+| Document 12| 0.8571428571428571      | 0.14285714285714285     |
+| Document 13| 0.14285714285714285     | 0.8571428571428571      |
+| Document 14| 0.875                   | 0.125                   |
+| Document 15| 0.14285714285714285     | 0.8571428571428571      |
+| Document 16| 0.8571428571428571      | 0.14285714285714285     |
+| Document 17| 0.7142857142857143      | 0.2857142857142857      |
+| Document 18| 0.42857142857142855     | 0.5714285714285714      |
+| Document 19| 0.42857142857142855     | 0.5714285714285714      |
+ 
+
+and `data/output-data/topic-word-distribution.txt`
 
 ## Contact details
 M. Taimoor Khan (taimoor.khan@gesis.org)
