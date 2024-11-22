@@ -36,6 +36,7 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 
 ## Sample input and output
 - sample input data is given in `data/input-data.txt`
+
 | Headlines and Summaries |
 |--------------------------|
 | Wall St. Bears Claw Back Into the Black (Reuters) Reuters |
@@ -50,7 +51,8 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 | Tearaway world oil prices, toppling records and straining wallets, present a new economic menace barely three months before the US presidential elections. |
 | Stocks End Up, But Near Year Lows (Reuters) Reuters |
 | Stocks ended slightly higher on Friday but stayed near lows for the year as oil prices surged past barrel. |
-|------------------------------------------------------------------------------------------------------------|
+
+
 - sample putput data is given in `data/output-data/document-topic-distribution.txt` and `data/output-data/topic-word-distribution.txt`
 
 ## Contact details
