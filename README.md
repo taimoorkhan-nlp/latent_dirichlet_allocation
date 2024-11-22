@@ -81,5 +81,11 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 
 and `data/output-data/topic-word-distribution.txt`
 
+| Topic Name | Words and Probabilities                                                                                   |
+|------------|----------------------------------------------------------------------------------------------------------|
+| Topic 0    | enjoy: 0.0165, cooking: 0.0165, pasta: 0.0165, baking: 0.0165, dinner: 0.0015                             |
+| Topic 1    | cooking: 0.0191, dinner: 0.0191, baking: 0.0191, enjoy: 0.0017, pasta: 0.0017                             |
+
+
 ## Contact details
 M. Taimoor Khan (taimoor.khan@gesis.org)
