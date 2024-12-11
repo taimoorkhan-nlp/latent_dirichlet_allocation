@@ -1,5 +1,5 @@
 
-# Topic Modeling (Latent Dirichlet Allocation with Collapsed Gibbs Sampling)
+# Topic Modeling (Latent Dirichlet Allocation)
 
 Description:
 Topic modeling is very handy in exploring new domains to uncover the thematic structures within it. It assumes that each document is a blend of various topics, where each topic itself is a mix of words. The method reads input data from a text file (document per line), and produces topic probabilities per document and top words (along with their probabilities) per topic.
