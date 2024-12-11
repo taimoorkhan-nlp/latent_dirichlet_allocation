@@ -22,11 +22,10 @@ Social scientist examining the dynamics of political poll reviews to gain nuance
 - `data/input-data/revdictionary.json`
 
 *scripts*
-- `prepare-data.ipynb`
 - `LDA-collapsed-gibbs-sampling.ipynb`
 - `LICENSE.txt`
-- `requirements.txt`
-
+- *requirements.txt not needed*
+  
 ## Environment setup
 As it is vanilla implementation of the latent dirichlet allocation technique with everything built from scratch. 
 - Setup the environment using `requirements.txt` through command `pip install -r requirements.txt`
