@@ -10,7 +10,8 @@ The method assumes that each document contains a mixture of topics and that each
 - The probability of each topic appearing in each document.
 - The most representative words for each topic, along with their probabilities.
 
-The method implements [latent dirichlet allocation (LDA)](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf?ref=http://githubhelp.com) in specific with collapsed gibbs sampling that coverges to a more balanced distribution more efficiently than Gibbs sampling inference [(LDA with collapsed gibbs sampling)](https://www.cs.cmu.edu/~wcohen/10-605/papers/fastlda.pdf). It uses Markov chain monti carlo approach to initialize the model with a random state. The method provides vanila implementation (using only basic packages for loading data e.g., numpy, json and random number generation) of Topic modeling with maximum control to customize its behavior. It gives user control over internal decisions with transparent way. The method is implemented as a class to easily extend its behavior. 
+This approach is built on [latent dirichlet allocation (LDA)](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf?ref=http://githubhelp.com), using a specialized technique called collapsed Gibbs sampling [(LDA with collapsed gibbs sampling)](https://www.cs.cmu.edu/~wcohen/10-605/papers/fastlda.pdf). This enhances efficiency, producing a balanced topic distribution while allowing users control over the model’s internal workings.
+It uses Markov chain monti carlo approach to initialize the model with a random state. The method provides vanila implementation (using only basic packages for loading data e.g., numpy, json and random number generation) of Topic modeling with maximum control to customize its behavior. It gives user control over internal decisions with transparent way. The method is implemented as a class to easily extend its behavior. 
 
 ## Keywords
 topic modeling, latent dirichlet allocation, LDA
