@@ -3,8 +3,12 @@
 
 ## Description:
 
-This method uses topic modeling to identify key topics and their associated words in text data, such as documents, social media posts, or other unstructured datasets.
-It assumes that each document is a blend of various topics, where each topic itself is a mix of words. The method reads input data from a text file (document per line), and produces topic probabilities per document and top associated words (along with their probabilities) per topic.
+This method helps uncover hidden themes within a collection of text documents, making it a valuable tool for exploring unfamiliar domains. For example, a social scientist analyzing public discussions on social media or academic papers on a particular topic can use this method to identify recurring themes or topics.
+
+The method assumes that each document contains a mixture of topics and that each topic comprises a distinct set of words. By processing a text file with one document per line, the method generates two key outputs:
+
+- The probability of each topic appearing in each document.
+- The most representative words for each topic, along with their probabilities.
 
 The method implements [latent dirichlet allocation (LDA)](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf?ref=http://githubhelp.com) in specific with collapsed gibbs sampling that coverges to a more balanced distribution more efficiently than Gibbs sampling inference [LDA with collapsed gibbs sampling](https://www.cs.cmu.edu/~wcohen/10-605/papers/fastlda.pdf). It uses Markov chain monti carlo approach to initialize the model with a random state. The method provides vanila implementation (using only basic packages for loading data e.g., numpy, json and random number generation) of Topic modeling with maximum control to customize its behavior. It gives user control over internal decisions with transparent way. The method is implemented as a class to easily extend its behavior. 
 
