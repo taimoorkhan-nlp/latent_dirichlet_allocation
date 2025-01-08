@@ -35,9 +35,9 @@ A social scientist wants to examine the dynamics of political poll reviews to ga
   
 ## Environment setup
 As it is vanilla implementation of the latent dirichlet allocation technique with everything built from scratch. 
-- Setup the environment using `requirements.txt` through command `pip install -r requirements.txt`
+- Setup the environment using [requirements.txt](requirements.txt) through command `pip install -r requirements.txt`
 - Put your data in [data/input-data.txt](data/input-data.txt)
-- Execute the first notebook `prepare-data.ipynb` to transform the data into integer encoding
+- Execute the first notebook [prepare-data.ipynb](prepare-data.ipynb) to transform the data into integer encoding
 - Execute the main notebook `[LDA-collapsed-gibbs-sampling.ipynb](LDA-collapsed-gibbs-sampling.ipynb) to get results 
 
 ## Sample input and output
@@ -85,7 +85,7 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 | Document 19| 0.42857142857142855     | 0.5714285714285714      |
  
 
-and `data/output-data/topic-word-distribution.txt`
+and [data/output-data/topic-word-distribution.txt](data/output-data/topic-word-distribution.txt)
 
 | Topic Name | Words and Probabilities                                                                                   |
 |------------|----------------------------------------------------------------------------------------------------------|
