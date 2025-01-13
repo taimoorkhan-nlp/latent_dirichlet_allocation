@@ -43,7 +43,7 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 ## Sample input and output
 - sample input data is given in [data/input-data.txt](data/input-data.txt)
 
-| Headlines and Summaries |
+| Headlines |
 |--------------------------|
 | India calls for fair trade rules|
 |Sluggish economy hits German jobs|
@@ -59,7 +59,6 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 |Peugeot deal boosts Mitsubishi|
 |Ad sales boost Time Warner profit|
 |Yukos unit buyer faces loan claim|
-----------------------------------|
 
 ![image](https://github.com/user-attachments/assets/3586384f-c48a-4d80-9105-2c3577264471)
  |
