@@ -16,7 +16,7 @@ It uses Markov chain monti carlo approach to initialize the model with a random 
 ## Keywords
 topic modeling, latent dirichlet allocation, LDA
 
-## Use case
+## Use case(s)
 A social scientist wants to examine the dynamics of political poll reviews to gain nuanced insights into voter interests.
 
 ## Structure
