@@ -41,6 +41,8 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 - Execute the main notebook `[LDA-collapsed-gibbs-sampling.ipynb](LDA-collapsed-gibbs-sampling.ipynb) to get results 
 
 ## Sample input and output
+The input can be any text to be explored. For demonstration we are using BBC news article headlines (10 shown below) as sample documents.
+
 - sample input data is given in [data/input.csv](data/input.csv)
 
 | Headlines |
@@ -60,8 +62,33 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 |Ad sales boost Time Warner profit|
 |Yukos unit buyer faces loan claim|
 
-- sample putput data is given in [data/output-data/document-topic-distribution.txt](data/output-data/document-topic-distribution.txt)
-  
+**Topic modeling has two important results**
+
+*Latent topics* identified in the corpus. Each topic is represented by top most presentable words for that topic. Its similar to clustering in the sense that the words are grouped as topics and labeled unintuitively as topic 0, topic 1 etc. However, unlike clustering, the words have probabilities of relevance to the other words of the topic. Using these probabilities, only the top few words (10 or 20) are used to represent a topic. Therefore, it is also called word topic distribution.
+
+*Topics in documents* are the probabilities of topics within each document. A general conception is that a document is not about entirely about a single topic and instead has different percentages of multiple topics. The topics in documents provide the probabilities of each topic in each document.
+
+**words distribution per topic** \
+The three latent topics determind from this dataset are labeled as Topic 0, Topic 1, and Topic 2. \
+Topic 0: Represents profit, production and growth in economy \
+Topic 1: Represents trade and and deals of fuel and BMW mentioning Germany and France \
+Topic 2: Represents jobs, Yukos firm, India and Japan 
+
+These three topics gives a general idea of the topics covered in the data.
+
+| Topic Name | Words and Probabilities                                                                                   |
+|------------|----------------------------------------------------------------------------------------------------------|
+| Topic 0    | ('profits', 0.028118645256293383)('profit', 0.028118645256293383)('firm', 0.028118645256293383)('Japan', 0.028118645256293383)('Japanese', 0.021106514269686554)('2004', 0.014094383283079725)('prices', 0.014094383283079725)('Parmalat', 0.014094383283079725)('recession', 0.014094383283079725)('wine', 0.014094383283079725)                             |
+| Topic 1    | ('hits', 0.03138901071361443)('jobs', 0.025123739114090594)('growth', 0.025123739114090594)('India', 0.018858467514566754)('new', 0.018858467514566754)('oil', 0.018858467514566754)('trade', 0.012593195915042914)('takeover', 0.012593195915042914)('lifts', 0.012593195915042914)('production', 0.012593195915042914)|
+| Topic 2    | ('economy', 0.0381320982171182)('deal', 0.0381320982171182)('fuel', 0.0317873231393947)('Yukos', 0.02544254806167121)('gets', 0.02544254806167121)('German', 0.019097772983947717)('sales', 0.019097772983947717)('BMW', 0.019097772983947717)('rise', 0.012752997906224223)('$280bn', 0.012752997906224223)|
+
+Written in [data/output-data/topic-word-distribution.txt](data/output-data/topic-word-distribution.txt)
+
+**Topic distribution per document** \
+Each document talks about the topics identified to different extent. For example, document 0 can be 45% topic 0, 45% topic 1 and 10% topic 2.
+
+Therefore, it is important to know which documents are dominated by which topics, so that if a reader is interested in knowing particularly about topic 1 they can only read the documents where topic 1 is the major topic.
+ 
 | Document   | Topic 0                 | Topic 1                 | Topic 2             |
 |------------|-------------------------|-------------------------|---------------------|
 | Document 0 | 0.125                   | 0.75                    | 0.125               |
@@ -75,15 +102,10 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 | Document 8 | 0.25                    | 0.375                   | 0.375               |
 | Document 9 | 0.42857142857142855     | 0.42857142857142855     | 0.14285714285714285 |
 
+Written in file [data/output-data/document-topic-distribution.txt](data/output-data/document-topic-distribution.txt)
 
 
-and [data/output-data/topic-word-distribution.txt](data/output-data/topic-word-distribution.txt)
 
-| Topic Name | Words and Probabilities                                                                                   |
-|------------|----------------------------------------------------------------------------------------------------------|
-| Topic 0    | ('profits', 0.028118645256293383)('profit', 0.028118645256293383)('firm', 0.028118645256293383)('Japan', 0.028118645256293383)('Japanese', 0.021106514269686554)('2004', 0.014094383283079725)('prices', 0.014094383283079725)('Parmalat', 0.014094383283079725)('recession', 0.014094383283079725)('wine', 0.014094383283079725)                             |
-| Topic 1    | ('hits', 0.03138901071361443)('jobs', 0.025123739114090594)('growth', 0.025123739114090594)('India', 0.018858467514566754)('new', 0.018858467514566754)('oil', 0.018858467514566754)('trade', 0.012593195915042914)('takeover', 0.012593195915042914)('lifts', 0.012593195915042914)('production', 0.012593195915042914)|
-| Topic 2    | ('economy', 0.0381320982171182)('deal', 0.0381320982171182)('fuel', 0.0317873231393947)('Yukos', 0.02544254806167121)('gets', 0.02544254806167121)('German', 0.019097772983947717)('sales', 0.019097772983947717)('BMW', 0.019097772983947717)('rise', 0.012752997906224223)('$280bn', 0.012752997906224223)|
 
 ## Contact details
-M. Taimoor Khan (taimoor.khan@gesis.org)
+M. Taimoor Khan (<a href="mailto:taimoor.khan@gesis.org">taimoor.khan@gesis.org</a>)
