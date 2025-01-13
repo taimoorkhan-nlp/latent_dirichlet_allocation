@@ -1,5 +1,5 @@
 
-# Discovering Themes in Text with Topic Modeling (Latent dirichlet allocation)
+# Discovering Themes in Text with Topic Modeling (Latent Dirichlet Allocation)
 
 ## Description:
 
