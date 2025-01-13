@@ -60,9 +60,6 @@ As it is vanilla implementation of the latent dirichlet allocation technique wit
 |Ad sales boost Time Warner profit|
 |Yukos unit buyer faces loan claim|
 
-![image](https://github.com/user-attachments/assets/3586384f-c48a-4d80-9105-2c3577264471)
-
-
 - sample putput data is given in [data/output-data/document-topic-distribution.txt](data/output-data/document-topic-distribution.txt)
   
 | Document   | Topic 0                 | Topic 1                 | Topic 2             |
