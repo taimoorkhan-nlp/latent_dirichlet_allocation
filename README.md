@@ -10,11 +10,11 @@ The method assumes that each document contains a mixture of topics and that each
 - The probability of each topic appearing in each document.
 - The most representative words for each topic, along with their probabilities.
 
-This approach is built on [latent dirichlet allocation (LDA)](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf?ref=http://githubhelp.com), using a specialized technique called collapsed Gibbs sampling [(LDA with collapsed gibbs sampling)](https://www.cs.cmu.edu/~wcohen/10-605/papers/fastlda.pdf). This enhances efficiency, producing a balanced topic distribution while allowing users control over the model’s internal workings.
-It uses Markov chain monti carlo approach to initialize the model with a random state. The method provides vanila implementation (using only basic packages for loading data e.g., numpy, json and random number generation) of Topic modeling with maximum control to customize its behavior. It gives user control over internal decisions with transparent way. The method is implemented as a class to easily extend its behavior. 
+This approach is built on [Latent Dirichlet Allocation (LDA)](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf?ref=http://githubhelp.com), using a specialized technique called collapsed Gibbs sampling [(LDA with collapsed Gibbs sampling)](https://www.cs.cmu.edu/~wcohen/10-605/papers/fastlda.pdf). This enhances efficiency, producing a balanced topic distribution while allowing users control over the model’s internal workings.
+It uses [Markov chain Monti Carlo approach](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) to initialize the model with a random state. The method provides vanilla implementation (using only basic packages for loading data e.g., numpy, JSON, and random number generation) of Topic modeling with maximum control to customize its behavior. It gives users transparent control over internal decisions. The method is implemented as a class to extend its behavior easily. 
 
 ## Keywords
-topic modeling, latent dirichlet allocation, LDA
+topic modeling, Latent Dirichlet Allocation, LDA
 
 ## Use Case(s)
 A social scientist wants to examine the dynamics of political poll reviews to gain nuanced insights into voter interests.
@@ -34,14 +34,14 @@ A social scientist wants to examine the dynamics of political poll reviews to ga
 - *requirements.txt not needed*
   
 ## Environment setup
-As it is vanilla implementation of the latent dirichlet allocation technique with everything built from scratch. 
+As it is the vanilla implementation of the Latent Dirichlet Allocation technique with everything built from scratch. 
 - Setup the environment using [requirements.txt](requirements.txt) through command `pip install -r requirements.txt`
 - Put your data in [data/input.csv](data/input.csv)
 - Execute the first notebook [prepare-data.ipynb](prepare-data.ipynb) to transform the data into integer encoding
 - Execute the main notebook `[LDA-collapsed-gibbs-sampling.ipynb](LDA-collapsed-gibbs-sampling.ipynb) to get results 
 
 ## Sample input and output
-The input can be any text to be explored. For demonstration we are using BBC news article headlines (10 shown below) as sample documents.
+The input can be any text to be explored. For demonstration, we are using BBC news article headlines (10 shown below) as sample documents.
 
 - sample input data is given in [data/input.csv](data/input.csv)
 
@@ -64,17 +64,17 @@ The input can be any text to be explored. For demonstration we are using BBC new
 
 **Topic modeling has two important results**
 
-*Latent topics* identified in the corpus. Each topic is represented by top most presentable words for that topic. Its similar to clustering in the sense that the words are grouped as topics and labeled unintuitively as topic 0, topic 1 etc. However, unlike clustering, the words have probabilities of relevance to the other words of the topic. Using these probabilities, only the top few words (10 or 20) are used to represent a topic. Therefore, it is also called word topic distribution.
+*Latent topics* identified in the corpus. Each topic is represented by the top most presentable words for that topic. It is similar to clustering in the sense that the words are grouped as topics and labeled unintuitively as topic 0, topic 1, etc. However, unlike clustering, the words have probabilities of relevance to the other words of the topic. Using these probabilities, only the top few words (10 or 20) are used to represent a topic. Therefore, it is also called word topic distribution.
 
-*Topics in documents* are the probabilities of topics within each document. A general conception is that a document is not about entirely about a single topic and instead has different percentages of multiple topics. The topics in documents provide the probabilities of each topic in each document.
+*Topics in documents* are the probabilities of topics within each document. A general conception is that a document is not entirely about a single topic and instead has different percentages of multiple topics. The topics in documents provide the probabilities of each topic in each document.
 
 **words distribution per topic** \
-The three latent topics determind from this dataset are labeled as Topic 0, Topic 1, and Topic 2. \
-Topic 0: Represents profit, production and growth in economy \
-Topic 1: Represents trade and and deals of fuel and BMW mentioning Germany and France \
+The three latent topics determined from this dataset are labeled as Topic 0, Topic 1, and Topic 2. \
+Topic 0: Represents profit, production, and growth in economy \
+Topic 1: Represents trade and deals of fuel and BMW mentioning Germany and France \
 Topic 2: Represents jobs, Yukos firm, India and Japan 
 
-These three topics gives a general idea of the topics covered in the data.
+These three topics give a general idea of the topics covered in the data.
 
 | Topic Name | Words and Probabilities                                                                                   |
 |------------|----------------------------------------------------------------------------------------------------------|
@@ -85,7 +85,7 @@ These three topics gives a general idea of the topics covered in the data.
 Written in [data/output-data/topic-word-distribution.txt](data/output-data/topic-word-distribution.txt)
 
 **Topic distribution per document** \
-Each document talks about the topics identified to different extent. For example, document 0 can be 45% topic 0, 45% topic 1 and 10% topic 2.
+Each document talks about the topics identified to a different extent. For example, document 0 can be 45% topic 0, 45% topic 1, and 10% topic 2.
 
 Therefore, it is important to know which documents are dominated by which topics, so that if a reader is interested in knowing particularly about topic 1 they can only read the documents where topic 1 is the major topic.
  
