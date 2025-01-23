@@ -41,7 +41,7 @@ As it is the vanilla implementation of the Latent Dirichlet Allocation technique
 - Execute the main notebook `[LDA-collapsed-gibbs-sampling.ipynb](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/LDA-collapsed-gibbs-sampling.ipynb) to get results 
 
 ## Sample input and output
-The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
+-The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
 
 | Headlines |
 |--------------------------|
@@ -56,7 +56,7 @@ The input can be any text to explore. For demonstration purposes, we use BBC new
 |US trade gap hits record in 2004|
 |India widens access to telecoms|
 
-**Topic modeling has two important results**
+-**Topic modeling has two important results**
 
 *Latent topics* identified in the corpus. Each topic is represented by the top most presentable words for that topic. It is similar to clustering in the sense that the words are grouped as topics and labeled unintuitively as topic 0, topic 1, etc. However, unlike clustering, the words have probabilities of relevance to the other words of the topic. Using these probabilities, only the top few words (10 or 20) are used to represent a topic. Therefore, it is also called word topic distribution.
 
