@@ -41,7 +41,9 @@ As it is the vanilla implementation of the Latent Dirichlet Allocation technique
 - Execute the main notebook `[LDA-collapsed-gibbs-sampling.ipynb](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/LDA-collapsed-gibbs-sampling.ipynb) to get results 
 
 ## Sample input and output
--The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
+
+### Input
+The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
 
 | Headlines |
 |--------------------------|
@@ -56,19 +58,10 @@ As it is the vanilla implementation of the Latent Dirichlet Allocation technique
 |US trade gap hits record in 2004|
 |India widens access to telecoms|
 
--**Topic modeling has two important results**
+### Output 1: Word Distribution Per Topic
 
-*Latent topics* identified in the corpus. Each topic is represented by the top most presentable words for that topic. It is similar to clustering in the sense that the words are grouped as topics and labeled unintuitively as topic 0, topic 1, etc. However, unlike clustering, the words have probabilities of relevance to the other words of the topic. Using these probabilities, only the top few words (10 or 20) are used to represent a topic. Therefore, it is also called word topic distribution.
-
-*Topics in documents* are the probabilities of topics within each document. A general conception is that a document is not entirely about a single topic and instead has different percentages of multiple topics. The topics in documents provide the probabilities of each topic in each document.
-
-**words distribution per topic** \
-The three latent topics determined from this dataset are labeled as Topic 0, Topic 1, and Topic 2. \
-Topic 0: Represents profit, production, and growth in economy \
-Topic 1: Represents trade and deals of fuel and BMW mentioning Germany and France \
-Topic 2: Represents jobs, Yukos firm, India and Japan 
-
-These three topics give a general idea of the topics covered in the data.
+The latent topics identified are represented by the most significant words and their probabilities. It is similar to clustering in the sense that the words are grouped as topics and labeled unintuitively as topic 0, topic 1, etc. However, unlike clustering, the words have probabilities of relevance to the other words of the topic. Using these probabilities, only the top few words (10 or 20) are used to represent a topic. Therefore, it is also called word topic distribution.
+Here are three example topics from the dataset:
 
 | Topic Name | Words and Probabilities                                                                                   |
 |------------|----------------------------------------------------------------------------------------------------------|
@@ -76,10 +69,10 @@ These three topics give a general idea of the topics covered in the data.
 | Topic 1    | ('hits', 0.03138901071361443)('jobs', 0.025123739114090594)('growth', 0.025123739114090594)('India', 0.018858467514566754)('new', 0.018858467514566754)('oil', 0.018858467514566754)('trade', 0.012593195915042914)('takeover', 0.012593195915042914)('lifts', 0.012593195915042914)('production', 0.012593195915042914)|
 | Topic 2    | ('economy', 0.0381320982171182)('deal', 0.0381320982171182)('fuel', 0.0317873231393947)('Yukos', 0.02544254806167121)('gets', 0.02544254806167121)('German', 0.019097772983947717)('sales', 0.019097772983947717)('BMW', 0.019097772983947717)('rise', 0.012752997906224223)('$280bn', 0.012752997906224223)|
 
-Written in [data/output-data/topic-word-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/topic-word-distribution.txt)
+The complete distribution is written to [data/output-data/topic-word-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/topic-word-distribution.txt)
 
-**Topic distribution per document** \
-Each document talks about the topics identified to a different extent. For example, document 0 can be 45% topic 0, 45% topic 1, and 10% topic 2.
+### Output 2: Topic Distribution Per Document
+Each document is assigned probabilities of belonging to the identified topics. These probabilities indicate the extent to which each document relates to specific topics. For example, document 0 can be 45% topic 0, 45% topic 1, and 10% topic 2.
 
 Therefore, it is important to know which documents are dominated by which topics, so that if a reader is interested in knowing particularly about topic 1 they can only read the documents where topic 1 is the major topic.
  
