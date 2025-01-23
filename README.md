@@ -5,7 +5,7 @@
 
 This method helps uncover hidden themes within a collection of text documents, making it a valuable tool for exploring unfamiliar domains. For example, a social scientist analyzing public discussions on social media or academic papers on a particular topic can use this method to identify recurring themes or topics.
 
-The method assumes that each document contains a mixture of topics and that each topic comprises a distinct set of words. By processing a text file with one document per line, the method generates two key outputs:
+The method assumes that each document contains a mixture of topics and each topic comprises a distinct set of words. By processing a text file with one document per line, the method generates two key outputs:
 
 - The probability of each topic appearing in each document.
 - The most representative words for each topic, along with their probabilities.
@@ -41,9 +41,7 @@ As it is the vanilla implementation of the Latent Dirichlet Allocation technique
 - Execute the main notebook `[LDA-collapsed-gibbs-sampling.ipynb](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/LDA-collapsed-gibbs-sampling.ipynb) to get results 
 
 ## Sample input and output
-The input can be any text to be explored. For demonstration, we are using BBC news article headlines (10 shown below) as sample documents.
-
-- sample input data is given in [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
+The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
 
 | Headlines |
 |--------------------------|
@@ -57,10 +55,6 @@ The input can be any text to be explored. For demonstration, we are using BBC ne
 |Rank 'set to sell off film unit'|
 |US trade gap hits record in 2004|
 |India widens access to telecoms|
-|High fuel prices hit BA's profits|
-|Peugeot deal boosts Mitsubishi|
-|Ad sales boost Time Warner profit|
-|Yukos unit buyer faces loan claim|
 
 **Topic modeling has two important results**
 
