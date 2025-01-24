@@ -4,9 +4,9 @@ authors:
   - family-names: Khan
     given-names: Taimoor
     orcid: 0000-0002-6542-9217
-title: "text edit distance similarity"
+title: "Discovering Themes in Text with Topic Modeling (Latent Dirichlet Allocation)"
 version: 1.0
 identifiers:
   - type: 
     value: 
-date-released: 2024-11-28
+date-released: 2025-01-24
