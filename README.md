@@ -60,8 +60,8 @@ The input can be any text to explore. For demonstration purposes, we use BBC new
 
 ### Output 1: Word Distribution Per Topic
 
-The latent topics identified are represented by the most significant words and their probabilities. It is similar to clustering in the sense that the words are grouped as topics and labeled unintuitively as topic 0, topic 1, etc. However, unlike clustering, the words have probabilities of relevance to the other words of the topic. Using these probabilities, only the top few words (10 or 20) are used to represent a topic. Therefore, it is also called word topic distribution.
-Here are three example topics from the dataset:
+The latent topics identified are represented by the most significant words and their probabilities. It is similar to clustering in the sense that the words are grouped as topics and labeled unintuitively as topic 0, topic 1, etc. However, unlike clustering, the words have probabilities of relevance to the topic. Using these probabilities, only the top few words (10 in config.json) are used to represent a topic i.e., topic-word distribution.
+For the three topics:
 
 | Topic Name | Words and Probabilities                                                                                   |
 |------------|----------------------------------------------------------------------------------------------------------|
@@ -72,9 +72,9 @@ Here are three example topics from the dataset:
 The complete distribution is written to [data/output-data/topic-word-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/topic-word-distribution.txt)
 
 ### Output 2: Topic Distribution Per Document
-Each document is assigned probabilities of belonging to the identified topics. These probabilities indicate the extent to which each document relates to specific topics. For example, document 0 can be 45% topic 0, 45% topic 1, and 10% topic 2.
+Each document is assigned probabilities of representing a topic based on the topic association of its words. These probabilities indicate the extent to which each document relates to specific topics. For example, document 0 can be 45% topic 0, 45% topic 1, and 10% topic 2.
 
-Therefore, it is important to know which documents are dominated by which topics, so that if a reader is interested in knowing particularly about topic 1 they can only read the documents where topic 1 is the major topic.
+In case a reader is interested in only reading more about topic 0, he/she may only focus on the documents where topic 0 is the major topic.
  
 | Document   | Topic 0                 | Topic 1                 | Topic 2             |
 |------------|-------------------------|-------------------------|---------------------|
