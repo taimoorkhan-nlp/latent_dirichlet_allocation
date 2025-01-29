@@ -19,7 +19,7 @@ topic modeling, Latent Dirichlet Allocation, LDA
 ## Use Case(s)
 A social scientist wants to examine the dynamics of political poll reviews to gain nuanced insights into voter interests.
 
-## Structure
+## Repo Structure
 - [data/](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/tree/master/data/)
 - [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv) BBC article headings, using only first 100 for demo
 
@@ -34,15 +34,12 @@ A social scientist wants to examine the dynamics of political poll reviews to ga
 - *requirements.txt not needed*
   
 ## Environment setup
-As it is the vanilla implementation of the Latent Dirichlet Allocation technique with everything built from scratch. 
+As it is the vanilla implementation of the Latent Dirichlet Allocation technique with everything built from scratch. It only needs `numpy`, `pandas`, `random` and `string` for basic operations while `json` to read method configurations in JSON format. 
 - Setup the environment using [requirements.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/requirements.txt) through command `pip install -r requirements.txt`
-- Put your data in [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
-- Execute the first notebook [prepare-data.ipynb](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/prepare-data.ipynb) to transform the data into integer encoding
-- Execute the main notebook `[LDA-collapsed-gibbs-sampling.ipynb](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/LDA-collapsed-gibbs-sampling.ipynb) to get results 
 
 ## Sample input and output
 
-### Input
+**Input data**
 The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
 
 | Headlines |
@@ -58,7 +55,7 @@ The input can be any text to explore. For demonstration purposes, we use BBC new
 |US trade gap hits record in 2004|
 |India widens access to telecoms|
 
-### Output 1: Word Distribution Per Topic
+**Output 1: Word Distribution Per Topic**
 
 The latent topics identified are represented by the most significant words and their probabilities. It is similar to clustering in the sense that the words are grouped as topics and labeled unintuitively as topic 0, topic 1, etc. However, unlike clustering, the words have probabilities of relevance to the topic. Using these probabilities, only the top few words (10 in config.json) are used to represent a topic i.e., topic-word distribution.
 For the three topics:
@@ -71,7 +68,8 @@ For the three topics:
 
 The complete distribution is written to [data/output-data/topic-word-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/topic-word-distribution.txt)
 
-### Output 2: Topic Distribution Per Document
+**Output 2: Topic Distribution Per Document**
+
 Each document is assigned probabilities of representing a topic based on the topic association of its words. These probabilities indicate the extent to which each document relates to specific topics. For example, document 0 can be 45% topic 0, 45% topic 1, and 10% topic 2.
 
 In case a reader is interested in only reading more about topic 0, he/she may only focus on the documents where topic 0 is the major topic.
@@ -92,7 +90,10 @@ In case a reader is interested in only reading more about topic 0, he/she may on
 
 Written in file [data/output-data/document-topic-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/document-topic-distribution.txt)
 
-
+## How to Use
+- Put your data in [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
+- Execute the first notebook [prepare-data.ipynb](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/prepare-data.ipynb) to transform the data into integer encoding
+- Execute the main notebook `[LDA-collapsed-gibbs-sampling.ipynb](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/LDA-collapsed-gibbs-sampling.ipynb) to get results
 
 
 ## Contact details
