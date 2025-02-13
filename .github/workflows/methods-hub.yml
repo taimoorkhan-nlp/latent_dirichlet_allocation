@@ -2,7 +2,7 @@ name: Test Content for Methods Hub
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   test-methods-hub-render:
     runs-on: ubuntu-24.04
