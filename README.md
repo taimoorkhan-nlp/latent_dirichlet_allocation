@@ -34,8 +34,11 @@ A social scientist wants to examine the dynamics of political poll reviews to ga
 - *requirements.txt not needed*
   
 ## Environment setup
-As it is the vanilla implementation of the Latent Dirichlet Allocation technique with everything built from scratch. It only needs `numpy`, `pandas`, `random` and `string` for basic operations while `json` to read method configurations in JSON format. 
+It is the vanilla implementation of the Latent Dirichlet Allocation technique with everything built from scratch, therefore only basic libraries i.e., `numpy`, `pandas`, `random` and `string` are needed to read data and generate random numbers.
+- Update [config.json](config.json) to read method configurations in JSON format and update as desired. 
 - Setup the environment using [requirements.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/requirements.txt) through command `pip install -r requirements.txt`
+- Put your data in [data/input.csv](data/input.csv)
+- Execute the notebook [LDA-collapsed-gibbs-sampling.ipynb](LDA-collapsed-gibbs-sampling.ipynb) to get results
 
 ## Sample input and output
 
