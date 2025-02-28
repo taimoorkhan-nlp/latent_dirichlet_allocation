@@ -14,7 +14,7 @@ This approach is built on [Latent Dirichlet Allocation (LDA)](https://www.jmlr.o
 It uses [Markov chain Monti Carlo approach](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) to initialize the model with a random state. The method provides vanilla implementation (using only basic packages for loading data e.g., numpy, JSON, and random number generation) of Topic modeling with maximum control to customize its behavior. It gives users transparent control over internal decisions. The method is implemented as a class to extend its behavior easily. 
 
 ## Keywords
-topic modeling, Latent Dirichlet Allocation, LDA
+topic modeling, Latent Dirichlet Allocation, document analysis
 
 ## Use Case(s)
 A social scientist wants to examine the dynamics of political poll reviews to gain nuanced insights into voter interests.
