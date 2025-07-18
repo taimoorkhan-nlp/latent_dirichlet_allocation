@@ -2,7 +2,7 @@
 # Discovering Themes in Text with Topic Modeling (Latent Dirichlet Allocation)
 
 ## Description
-The method uncovers hidden themes as semantic structures that are frequently discussed in the documents to explore unfamiliar domains. It may also be used to identify features as topics for subsequent tasks, e.g., applying the method on the hotel reviews corpus may result in topics representing food quality, menu, table service, pricing, etc. It calculates the co-occurrence frequencies among words to organize topics as ordered collections of words and documents as ordered collections of topics. As an unsupervised approach, the topics are unlabeled and rather represented by their top-most presentable words. It reads input having one document per line to generate two output files: document-topic 
+The method uncovers hidden themes as semantic structures that are frequently discussed in the documents to explore unfamiliar domains. It may also be used to identify features as topics for subsequent tasks, e.g., applying the method on the hotel reviews corpus may result in topics representing food quality, menu, table service, pricing, etc. It calculates the co-occurrence frequencies among words to organize topics as ordered collections of words and documents as ordered collections of topics. As an unsupervised approach, the topics are unlabeled and rather represented by their highest probability words. The method reads input as a document per line and outputs two files: document-topic distribution and topic-word distribution.
 
 ## Use Cases
 To explore the dynamics of political poll reviews for gaining nuanced insights into voter interests.
