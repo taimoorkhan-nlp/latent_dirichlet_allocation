@@ -82,7 +82,18 @@ Topic modeling is also a soft clustering approach (derived from the concept of s
 
 Topic models are generally represented by a plate-notation diagram as shown below [source](https://images.prismic.io/rosetta-marketing-website/9ee5d938-d009-4fcd-88c8-7bd539391da1_image+%2848%29.png?auto=compress,format). The rectangles (also called plates in the diagram) represent loops, while the circles represent variables. The $\alpha$ and $\beta$ priors are consumed by $\Theta$ and $\Phi$ representing document-topic and topic-word distributions, respectively. *W* represents the sampled word, while *Z* is the topic assigned to it. *K*, *M*, and *N* as the loop stopping condition, represent the number of topics, the number of documents in the corpus, and the number of words in the topics, respectively. It can also be observed that among all variables, only *W* has a gray background, as it is the only known variable. 
 
-![](https://images.prismic.io/rosetta-marketing-website/9ee5d938-d009-4fcd-88c8-7bd539391da1_image+%2848%29.png?auto=compress,format)
+$\Theta_{d, t} = \frac{\eta_{d, t}^{-} + \alpha}{\sum_{k}^{K} \eta_{d,k}^{-} + K\alpha}$ 
+
+and
+
+$\Phi_{t, w} = \frac{\eta_{t, w}^{-} + \beta}{\sum_{v}^{V} \eta_{t,v}^{-} + V\beta}$
+
+$P(z = t | z_-, w, d, .) = \Theta_{d, t} \times \Phi_{t, w}$
+
+Where, *w* is the sampled word from *d*^{th} document, whose probability is computed for topic *t* in $\Theta_{d, t}$. The denominator normalizes the probabilities, having *K* as the total number of topics. $\Phi_{t, w}$ computes the probability of word *w* for topic *t*, where *V* is the vocabulary size. $\eta$ represents frequency e.g., $\eta_{d,t}$ means the number of times topic *t* appears in document *d*. While *-* is for excluding the scores of the sampled word to avoid bias in favor of the present topic.
+
+
+<img src="https://images.prismic.io/rosetta-marketing-website/9ee5d938-d009-4fcd-88c8-7bd539391da1_image+%2848%29.png?auto=compress,format" alt="Alt Text" width="300" height="200">
 
 The Vanilla implementation offers higher transparency and thus more control over the internal decisions of the method. 
 
