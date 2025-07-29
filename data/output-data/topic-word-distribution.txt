@@ -1,8 +1,0 @@
-***Words per Topic***
-
-Topic 1:
-('new', 0.0158)('Blair', 0.0136)('hits', 0.0096)('net', 0.009)('election', 0.0071)('Labour', 0.0071)('growth', 0.0065)('face', 0.0062)('says', 0.0062)('row', 0.0062)
-Topic 2:
-('win', 0.009)('deal', 0.0087)('show', 0.0087)('shares', 0.0068)('plan', 0.0068)('firm', 0.0065)('China', 0.0065)('back', 0.0065)('takes', 0.0065)('Yukos', 0.0062)
-Topic 3:
-('film', 0.0123)('set', 0.0089)('top', 0.008)('hit', 0.0077)('wins', 0.0074)('return', 0.0071)('bid', 0.0071)('gets', 0.0065)('Brown', 0.0065)('economy', 0.0061)

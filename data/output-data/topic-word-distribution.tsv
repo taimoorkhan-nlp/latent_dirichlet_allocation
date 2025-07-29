@@ -1,0 +1,11 @@
+topic-1	topic-2	topic-3
+('deal', np.float64(0.0361))	('profit', np.float64(0.0364))	('economy', np.float64(0.0386))
+('hits', np.float64(0.0301))	('jobs', np.float64(0.0291))	('fuel', np.float64(0.0322))
+('profits', np.float64(0.0241))	('India', np.float64(0.0219))	('Yukos', np.float64(0.0258))
+('growth', np.float64(0.0241))	('new', np.float64(0.0219))	('firm', np.float64(0.0193))
+('Japan', np.float64(0.0241))	('rise', np.float64(0.0146))	('oil', np.float64(0.0193))
+('gets', np.float64(0.0241))	('$280bn', np.float64(0.0146))	('Japanese', np.float64(0.0193))
+('German', np.float64(0.0181))	('French', np.float64(0.0146))	('BMW', np.float64(0.0193))
+('sales', np.float64(0.0181))	('boost', np.float64(0.0146))	('trade', np.float64(0.0129))
+('record', np.float64(0.0121))	('battle', np.float64(0.0146))	('prices', np.float64(0.0129))
+('2004', np.float64(0.0121))	('Lufthansa', np.float64(0.0146))	('loan', np.float64(0.0129))
