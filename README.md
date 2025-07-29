@@ -5,7 +5,7 @@
 The method uncovers hidden themes as semantic structures that are frequently discussed in the documents to explore unfamiliar domains. It may also be used to identify features as topics for subsequent tasks, e.g., applying the method on the hotel reviews corpus may result in topics representing food quality, menu, table service, pricing, etc. It calculates the co-occurrence frequencies among words to organize topics as ordered collections of words and documents as ordered collections of topics. As an unsupervised approach, the topics are unlabeled and rather represented by their highest probability words. The method reads input as a document per line and outputs two files: document-topic distribution and topic-word distribution.
 
 ## Use Cases
-To explore the main topics discussed in political poll reviews of different user groups and analyze how the topics vary across these groups. The topics may include health-care, immigration, economy etc. and are represented through their most prominent words. 
+To explore the main topics discussed in political poll reviews of different user groups and analyze how the topics vary across these groups. The topics may include health care, immigration, the economy, etc., and are represented through their most prominent words. 
 
 ## Input Data
 The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
@@ -22,11 +22,15 @@ The input can be any text to explore. For demonstration purposes, we use BBC new
 | Rank 'set to sell off film unit' |
 | US trade gap hits record in 2004 |
 | India widens access to telecoms |
+|...|
 
 ## Output Data
 
-The latent topics identified are represented by the most significant words and their probabilities. It is similar to clustering in the sense that the words are grouped as topics and labeled unintuitively as topic 0, topic 1, etc. However, unlike clustering, the words have probabilities of relevance to the topic. Using these probabilities, only the top few words (10 in config.json) are used to represent a topic i.e., topic-word distribution.
-For the three topics:
+The latent topics identified are represented by the most significant words and their probabilities. It is similar to clustering in the sense that the words are grouped as topics and labeled un-intuitively as topic 1, topic 2, etc. However, unlike clustering, the words have probabilities of relevance to the topic. 
+
+**Topic-word distribution:** Topic word distribution provides the top few words for each topic with their probabilities, organized in decreasing order of their probabilities, indicating relevance to the topic. 
+
+The following are 3 topics (`numTopics=3` in `config.json`) from the sample data, each with its top 10 words (`wordsPerTopic=10` in `config.json`) and their probabilities.
 
 | Topic Name | Words and Probabilities                                                                                   |
 |------------|----------------------------------------------------------------------------------------------------------|
@@ -36,7 +40,7 @@ For the three topics:
 
 The complete distribution is written to [data/output-data/topic-word-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/topic-word-distribution.txt)
 
-Topic Distribution Per Document: Each document is assigned probabilities of representing a topic based on the topic association of its words. These probabilities indicate the extent to which each document relates to specific topics. For example, document 0 can be 45% topic 0, 45% topic 1, and 10% topic 2.
+**Document-topic distribution:** Each document is assigned probabilities of representing a topic based on the topic association of its words. These probabilities indicate the extent to which the topics are discussed in these documents. For example, document 1 can be 45% topic 0, 45% topic 1, and 10% topic 2.
 
 In case a reader is interested in only reading more about topic 0, he/she may only focus on the documents where topic 0 is the major topic.
  
@@ -60,6 +64,8 @@ Written in file [data/output-data/document-topic-distribution.txt](https://githu
 The method runs on a small virtual machine provided by a cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD).
 
 ## Environment setup
+It is the vanilla implementation of the Latent Dirichlet Allocation, built from scratch. The libraries  
+
 It is the vanilla implementation of the Latent Dirichlet Allocation technique built from scratch; therefore, only basic libraries, i.e., `numpy`, `pandas`, `random`, and `string`, are needed to read data and generate random numbers.
 - Update [config.json](config.json) to read method configurations in JSON format and update as desired. 
 - Setup the environment using [requirements.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/requirements.txt) through command `pip install -r requirements.txt`
