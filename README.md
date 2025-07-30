@@ -32,31 +32,35 @@ The latent topics identified are represented by the most significant words and t
 
 The following are 3 topics (`numTopics=3` in `config.json`) from the sample data, each with its top 10 words (`wordsPerTopic=10` in `config.json`) and their probabilities.
 
-| Topic Name | Words and Probabilities                                                                                   |
-|------------|----------------------------------------------------------------------------------------------------------|
-| Topic 0    | ('deal', 0.039125056962437336)('profit', 0.03261506412342946)('profits', 0.026105071284421584)('Japanese', 0.019595078445413708)('takeover', 0.01308508560640583)('lifts', 0.01308508560640583)("India's", 0.01308508560640583)('high', 0.01308508560640583)('Parmalat', 0.01308508560640583)('China', 0.01308508560640583)                             |
-| Topic 1    | ('economy', 0.04184945338068379)('hits', 0.03488614998955504)('fuel', 0.03488614998955504)('Yukos', 0.02792284659842629)('growth', 0.02792284659842629)('Japan', 0.02792284659842629)('German', 0.020959543207297537)('$280bn', 0.013996239816168788)('French', 0.013996239816168788)('prices', 0.013996239816168788)|
-| Topic 2    | ('jobs', 0.024660229998155092)('firm', 0.024660229998155092)('gets', 0.024660229998155092)('India', 0.018510546706844596)('sales', 0.018510546706844596)('new', 0.018510546706844596)('oil', 0.018510546706844596)('BMW', 0.018510546706844596)('trade', 0.012360863415534098)('rise', 0.012360863415534098)|
+| word    | Topic 1 | Topic 2 | Topic 3 |
+|---------|---------|---------|---------|
+|	word 1 | (new, 0.0158)	|( win, 0.009)	| (film, 0.0123) |
+|	word 2 | (Blair, 0.0136)|	(deal, 0.0087) |	(set, 0.0089) |
+|	word 3 | (hits, 0.0096)	| (show, 0.0087)	| (top, 0.008) |
+|	word 4 | (net, 0.009)	| (shares, 0.0068)	| (hit, 0.0077) |
+|	word 5 | (election, 0.0071)|	(plan, 0.0068)	| (wins, 0.0074) |
+|	word 6 | (Labour, 0.0071)|	(firm, 0.0065)	| (return, 0.0071) |
+|	word 7 | (growth, 0.0065)|	(China, 0.0065)	| (bid, 0.0071) |
+|	word 8 | (face, 0.0062)	|( back, 0.0065)	| (gets, 0.0065) |
+|	word 9 | (says, 0.0062)	| (takes, 0.0065)	| (Brown, 0.0065) |
+|	word 10 | (row, 0.0062)	| (Yukos, 0.0062)	| (economy, 0.0061) |
+
+
 
 The complete distribution is written to [data/output-data/topic-word-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/topic-word-distribution.txt)
 
-**Document-topic distribution:** Each document is assigned probabilities of representing a topic based on the topic association of its words. These probabilities indicate the extent to which the topics are discussed in these documents. For example, document 1 can be 45% topic 0, 45% topic 1, and 10% topic 2.
+**Document-topic distribution:** Each document is assigned probabilities of representing a topic based on the topic association of its words. These probabilities indicate the extent to which the topics are discussed in these documents. For example, document 1 can be 37.5% topic 1, 25% topic 2, and 37.5% topic 3.
 
-In case a reader is interested in only reading more about topic 0, he/she may only focus on the documents where topic 0 is the major topic.
+In case a reader is interested in only reading more about topic 1, he/she may only focus on the documents where topic 1 is the major topic.
  
-| Document   | Topic 0                 | Topic 1                 | Topic 2             |
-|------------|-------------------------|-------------------------|---------------------|
-| Document 0 | 0.125                   | 0.5                    | 0.375                |
-| Document 1 | 0.375                   | 0.25                   | 0.375                |
-| Document 2 | 0.125                   | 0.75                   | 0.125                |
-| Document 3 | 0.375                   | 0.25                   | 0.375               |
-| Document 4 | 0.7142857142857143      | 0.14285714285714285     | 0.14285714285714285  |
-| Document 5 | 0.42857142857142855     | 0.2857142857142857     | 0.2857142857142857  |
-| Document 6 | 0.125                   | 0.375                     | 0.5               |
-| Document 7 | 0.25                   | 0.0.5                   | 0.25               |
-| Document 8 | 0.375                    | 0.375                   | 0.25               |
-| Document 9 | 0.14285714285714285     | 0.14285714285714285     | 0.7142857142857143 |
-| ...|
+| Document  |Topic 1   | Topic 2    | Topic 2  | Text                |
+|-----------|------------|----------|----------|---------------------|
+|	Doc 1   | 0.3750	| 0.2500	 | 0.3750	| India calls for fair trade rules |
+|	Doc 2   | 0.3750	| 0.2500	 | 0.3750	| Sluggish economy hits German jobs |
+|	Doc 3   | 0.3750	| 0.2500	 | 0.3750	| Indonesians face fuel price rise  |
+|	Doc 4   | 0.3750	| 0.3750	 | 0.2500	| Court rejects $280bn tobacco case |
+|	Doc 5   | 0.1429	| 0.2857	 | 0.5714	| Dollar gains on Greenspan speech |
+| ...       | 
 
 Written in file [data/output-data/document-topic-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/document-topic-distribution.txt)
 
@@ -64,18 +68,16 @@ Written in file [data/output-data/document-topic-distribution.txt](https://githu
 The method runs on a small virtual machine provided by a cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD).
 
 ## Environment setup
-It is the vanilla implementation of the Latent Dirichlet Allocation, built from scratch. The libraries  
+To set up the working environment, execute the command
 
-It is the vanilla implementation of the Latent Dirichlet Allocation technique built from scratch; therefore, only basic libraries, i.e., `numpy`, `pandas`, `random`, and `string`, are needed to read data and generate random numbers.
-- Update [config.json](config.json) to read method configurations in JSON format and update as desired. 
-- Setup the environment using [requirements.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/requirements.txt) through command `pip install -r requirements.txt`
-- Put your data in [data/input.csv](data/input.csv)
-- Execute the notebook [LDA-collapsed-gibbs-sampling.ipynb](LDA-collapsed-gibbs-sampling.ipynb) to get results
+`pip install -r requirements.txt`
 
 ## How to Use
-- Put your data in [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
-- Execute the first notebook [prepare-data.ipynb](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/prepare-data.ipynb) to transform the data into integer encoding
-- Execute the main notebook `[LDA-collapsed-gibbs-sampling.ipynb](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/LDA-collapsed-gibbs-sampling.ipynb) to get results
+- Execute notebook cells `[LDA-collapsed-gibbs-sampling.ipynb](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/LDA-collapsed-gibbs-sampling.ipynb) to reproduce the sample results using sample input data and configurations.
+
+- Copy your data to [data/input-data/news-headings.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input-data/news-headings.txt), having a document (text unit) per line.
+- To execute the method under different configurations, modify the settings in `config.json`. Specifics on configuration parameters and their values are provided in `LDA-collapsed-gibbs-sampling.ipynb` *Section A.2*
+
 
 ## Technical Details
 This method represents the [Latent Dirichlet Allocation (LDA)](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf?ref=http://githubhelp.com) topic modeling approach. It uses collapsed Gibbs sampling [(LDA with collapsed Gibbs sampling)](https://www.cs.cmu.edu/~wcohen/10-605/papers/fastlda.pdf) as the inference technique, which is an efficient extension of Gibbs sampling. The inference technique decides the most suitable topic for the sampled word, given the current state of the model, where the state of the model is determined by its document-topic distribution (having probabilities of each topic in each document) and topic-word distribution (having probabilities of each word in each topic). When a word switches its topic, i.e., its most suitable topic in the current state is different from its present topic (assigned in the previous iteration), it results in changing the state of the model. In each iteration, the inference technique samples each word to estimate its most suitable topic given the current state of the model. At the end of the iteration, the document-topic and topic-word probabilities are recomputed, and the model's state is updated. 
