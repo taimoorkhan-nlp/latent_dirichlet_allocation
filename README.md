@@ -2,13 +2,13 @@
 # Discovering Themes in Text with Topic Modeling (Latent Dirichlet Allocation)
 
 ## Description
-The method uncovers hidden themes as semantic structures that are frequently discussed in the documents to explore unfamiliar domains. It may also be used to identify features as topics for subsequent tasks. For example, applying the method to the hotel reviews corpus may result in topics representing food quality, menu, table service, pricing, etc. It calculates the co-occurrence frequencies among words to organize topics as ordered collections of words and documents as ordered collections of topics. As an unsupervised approach, the topics are unlabeled and are represented by their most probable words. The method reads input as a document per line and outputs two files: document-topic distribution and topic-word distribution.
+The method uncovers hidden themes as semantic structures that are frequently discussed in the documents to explore unfamiliar domains. It may also be used to identify features as topics for subsequent tasks. For example, applying the method to the hotel reviews corpus may result in topics that represent food quality, menu, table service, pricing, and so on. It calculates the co-occurrence frequencies among words to organize topics as ordered collections of words and documents as ordered collections of topics. As an unsupervised approach, the topics are unlabeled and are represented by their most probable words. The method reads input as a document per line and outputs two files: document-topic distribution and topic-word distribution.
 
 ## Use Cases
 To explore the main topics discussed in political poll reviews of different user groups and analyze how the topics vary across these groups. The topics may include health care, immigration, the economy, etc., and are represented through their most prominent words. 
 
 ## Input Data
-The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
+The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input.csv](data/input.csv)
 
 | Headlines |
 |--------------------------|
@@ -47,7 +47,7 @@ The following are 3 topics (`numTopics=3` in `config.json`) from the sample data
 
 
 
-The complete distribution is written to [data/output-data/topic-word-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/topic-word-distribution.txt)
+The complete distribution is written to [data/output-data/topic-word-distribution.txt](data/output-data/topic-word-distribution.txt)
 
 **Document-topic distribution:** Each document is assigned probabilities of representing a topic based on the topic association of its words. These probabilities indicate the extent to which the topics are discussed in these documents. For example, document 1 can be 37.5% topic 1, 25% topic 2, and 37.5% topic 3.
 
@@ -62,7 +62,7 @@ In case a reader is interested in only reading more about topic 1, he/she may on
 |	Doc 5   | 0.1429	| 0.2857	 | 0.5714	| Dollar gains on Greenspan speech |
 | ...       | 
 
-Written in file [data/output-data/document-topic-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/document-topic-distribution.txt)
+Written in file [data/output-data/document-topic-distribution.txt](data/output-data/document-topic-distribution.txt)
 
 ## Hardware Requirements
 The method runs on a small virtual machine provided by a cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD).
@@ -73,9 +73,9 @@ To set up the working environment, execute the command
 `pip install -r requirements.txt`
 
 ## How to Use
-- Execute notebook cells `[LDA-collapsed-gibbs-sampling.ipynb](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/LDA-collapsed-gibbs-sampling.ipynb) to reproduce the sample results using sample input data and configurations.
+- Execute notebook cells `[LDA-collapsed-gibbs-sampling.ipynb](LDA-collapsed-gibbs-sampling.ipynb) to reproduce the sample results using sample input data and configurations.
 
-- Copy your data to [data/input-data/news-headings.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input-data/news-headings.txt), having a document (text unit) per line.
+- Copy your data to [data/input-data/news-headings.txt](data/input-data/news-headings.txt), having a document (text unit) per line.
 - To execute the method under different configurations, modify the settings in `config.json`. Specifics on configuration parameters and their values are provided in `LDA-collapsed-gibbs-sampling.ipynb` *Section A.2*
 
 
