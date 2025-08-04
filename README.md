@@ -32,18 +32,18 @@ The latent topics identified are represented by the most significant words and t
 
 The following are 3 topics (`numTopics=3` in `config.json`) from the sample data, each with its top 10 words (`wordsPerTopic=10` in `config.json`) and their probabilities.
 
-| word    | Topic 1 | Topic 2 | Topic 3 |
+|     | Topic 1 | Topic 2 | Topic 3 |
 |---------|---------|---------|---------|
-|	word 1 | (new, 0.0158)	|( win, 0.009)	| (film, 0.0123) |
-|	word 2 | (Blair, 0.0136)|	(deal, 0.0087) |	(set, 0.0089) |
-|	word 3 | (hits, 0.0096)	| (show, 0.0087)	| (top, 0.008) |
-|	word 4 | (net, 0.009)	| (shares, 0.0068)	| (hit, 0.0077) |
-|	word 5 | (election, 0.0071)|	(plan, 0.0068)	| (wins, 0.0074) |
-|	word 6 | (Labour, 0.0071)|	(firm, 0.0065)	| (return, 0.0071) |
-|	word 7 | (growth, 0.0065)|	(China, 0.0065)	| (bid, 0.0071) |
-|	word 8 | (face, 0.0062)	|( back, 0.0065)	| (gets, 0.0065) |
-|	word 9 | (says, 0.0062)	| (takes, 0.0065)	| (Brown, 0.0065) |
-|	word 10 | (row, 0.0062)	| (Yukos, 0.0062)	| (economy, 0.0061) |
+|	w1 | (new, 0.0158)	|( win, 0.009)	| (film, 0.0123) |
+|	w2 | (Blair, 0.0136)|	(deal, 0.0087) |	(set, 0.0089) |
+|	w3 | (hits, 0.0096)	| (show, 0.0087)	| (top, 0.008) |
+|	w4 | (net, 0.009)	| (shares, 0.0068)	| (hit, 0.0077) |
+|	w5 | (election, 0.0071)|	(plan, 0.0068)	| (wins, 0.0074) |
+|	w6 | (Labour, 0.0071)|	(firm, 0.0065)	| (return, 0.0071) |
+|	w7 | (growth, 0.0065)|	(China, 0.0065)	| (bid, 0.0071) |
+|	w8 | (face, 0.0062)	|( back, 0.0065)	| (gets, 0.0065) |
+|	w9 | (says, 0.0062)	| (takes, 0.0065)	| (Brown, 0.0065) |
+|	w10 | (row, 0.0062)	| (Yukos, 0.0062)	| (economy, 0.0061) |
 
 
 
