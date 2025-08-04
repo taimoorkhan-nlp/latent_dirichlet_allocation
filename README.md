@@ -62,7 +62,7 @@ In case a reader is interested in only reading more about topic 1, he/she may on
 |	Doc 5   | 0.1429	| 0.2857	 | 0.5714	| Dollar gains on Greenspan speech |
 | ...       | 
 
-Written in file [data/output-data/document-topic-distribution.txt](data/output-data/document-topic-distribution.txt)
+Written in file [data/output-data/document-topic-distribution.tsv](data/output-data/document-topic-distribution.tsv)
 
 ## Hardware Requirements
 The method runs on a small virtual machine provided by a cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD).
