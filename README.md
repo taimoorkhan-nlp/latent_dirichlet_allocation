@@ -8,7 +8,7 @@ The method uncovers hidden themes as semantic structures that are frequently dis
 To explore the main topics discussed in political poll reviews of different user groups and analyze how the topics vary across these groups. The topics may include health care, immigration, the economy, etc., and are represented through their most prominent words. 
 
 ## Input Data
-The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input.csv](data/input.csv)
+The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input-data/news-headings.txt](data/input-data/news-headings.txt)
 
 | Headlines |
 |--------------------------|
@@ -47,13 +47,13 @@ The following are 3 topics (`numTopics=3` in `config.json`) from the sample data
 
 
 
-The complete distribution is written to [data/output-data/topic-word-distribution.txt](data/output-data/topic-word-distribution.txt)
+The complete distribution is written to [data/output-data/topic-word-distribution.tsv](data/output-data/topic-word-distribution.tsv)
 
 **Document-topic distribution:** Each document is assigned probabilities of representing a topic based on the topic association of its words. These probabilities indicate the extent to which the topics are discussed in these documents. For example, document 1 can be 37.5% topic 1, 25% topic 2, and 37.5% topic 3.
 
 In case a reader is interested in only reading more about topic 1, he/she may only focus on the documents where topic 1 is the major topic.
  
-| Document  |Topic 1   | Topic 2    | Topic 2  | Text                |
+|   |Topic 1   | Topic 2    | Topic 2  | Text                |
 |-----------|------------|----------|----------|---------------------|
 |	Doc 1   | 0.3750	| 0.2500	 | 0.3750	| India calls for fair trade rules |
 |	Doc 2   | 0.3750	| 0.2500	 | 0.3750	| Sluggish economy hits German jobs |
@@ -88,7 +88,7 @@ The method has two hyperparameters, i.e., $\alpha$ as the Dirichlet prior for th
 
 Topic modeling is also a soft clustering approach (derived from the concept of soft sets in mathematics), as all words belong to all topics and all topics belong to all documents with varying probabilities. However, for the sake of clarity, only higher probabilities are considered. Thus, in general, words having a higher probability for a topic have lower probabilities for all other topics, except for **polysemous words**. They can be among the highest probability words for multiple topics, where each occurrence is surrounded by its contextually correlated words.  
 
-Topic models are generally represented by a plate-notation diagram as shown below [source](https://images.prismic.io/rosetta-marketing-website/9ee5d938-d009-4fcd-88c8-7bd539391da1_image+%2848%29.png?auto=compress,format). The rectangles (also called plates in the diagram) represent loops, while the circles represent variables. The $\alpha$ and $\beta$ priors are consumed by $\Theta$ and $\Phi$ representing document-topic and topic-word distributions, respectively. *W* represents the sampled word, while *Z* is the topic assigned to it. *K*, *M*, and *N* as the loop stopping condition, represent the number of topics, the number of documents in the corpus, and the number of words in the topics, respectively. It can also be observed that among all variables, only *W* has a gray background, as it is the only known variable. 
+Topic models are generally represented by a plate-notation diagram as shown below [source](https://images.prismic.io/rosetta-marketing-website/9ee5d938-d009-4fcd-88c8-7bd539391da1_image+%2848%29.png?auto=compress,format). The rectangles (also called plates in the diagram) represent loops, while the circles represent variables. The $\alpha$ and $\beta$ priors are consumed by $\Theta$ and $\Phi$ representing document-topic and topic-word distributions, respectively. *W* represents the sampled word, while *Z* is the topic assigned to it. *K*, *M*, and *N* are the loop stopping conditions representing the number of topics, the number of documents in the corpus, and the number of words in the topics, respectively. It can also be observed that among all variables, only *W* has a gray background, as it is the only known variable. 
 
 $\Theta_{d, t} = \frac{\eta_{d, t}^{-} + \alpha}{\sum_{k}^{K} \eta_{d,k}^{-} + K\alpha}$ 
 
