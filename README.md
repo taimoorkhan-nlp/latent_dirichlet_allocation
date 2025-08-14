@@ -34,7 +34,7 @@ The following are 3 topics (`numTopics=3` in `config.json`) from the sample data
 
 |     | Topic 1 | Topic 2 | Topic 3 |
 |---------|---------|---------|---------|
-|	w1 | (new, 0.0158)	|( win, 0.009)	| (film, 0.0123) |
+|	w1 | (new, 0.0158)	|(win, 0.009)	| (film, 0.0123) |
 |	w2 | (Blair, 0.0136)|	(deal, 0.0087) |	(set, 0.0089) |
 |	w3 | (hits, 0.0096)	| (show, 0.0087)	| (top, 0.008) |
 |	w4 | (net, 0.009)	| (shares, 0.0068)	| (hit, 0.0077) |
@@ -53,7 +53,7 @@ The complete distribution is written to [data/output-data/topic-word-distributio
 
 In case a reader is interested in only reading more about topic 1, he/she may only focus on the documents where topic 1 is the major topic.
  
-|   |Topic 1   | Topic 2    | Topic 2  | Text                |
+|   |Topic 1   | Topic 2    | Topic 3  | Text                |
 |-----------|------------|----------|----------|---------------------|
 |	Doc 1   | 0.3750	| 0.2500	 | 0.3750	| India calls for fair trade rules |
 |	Doc 2   | 0.3750	| 0.2500	 | 0.3750	| Sluggish economy hits German jobs |
