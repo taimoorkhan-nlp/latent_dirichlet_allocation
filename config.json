@@ -6,7 +6,7 @@
 	"numNBurnin": 50,
 	"numSampleLag": 20,
 	"wordsPerTopic": 10,
-	"text-doc-path": "data/input.csv",
-	"integer-encoded-doc-path": "data/integer-encoded-data.txt",
-	"integer-word-dict": "data/revdictionary.json"
+	"input-path": "data/input-data/news-headings.txt",
+	"integer-encoded-path": "data/integer-encoded-data.txt",
+	"integer-word-dict-path": "data/revdictionary.json"
 }
