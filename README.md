@@ -17,63 +17,69 @@ This method is useful for anyone who needs to identify recurring themes or topic
 By applying this method, users can explore unfamiliar domains and discover hidden patterns in their text data.
 
 ## Input Data
-The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
+The input can be any text to explore. For demonstration purposes, we use BBC news article headlines as sample documents. Below are 10 example headlines taken from the dataset, which can be found in the file [data/input-data/news-headings.txt](data/input-data/news-headings.txt)
 
 | Headlines |
 |--------------------------|
-| India calls for fair trade rules|
-|Sluggish economy hits German jobs|
-|Indonesians face fuel price rise|
-|Court rejects $280bn tobacco case|
-|Dollar gains on Greenspan speech|
-|Mixed signals from French economy|
-|Ask Jeeves tips online ad revival|
-|Rank 'set to sell off film unit'|
-|US trade gap hits record in 2004|
-|India widens access to telecoms|
+| India calls for fair trade rules |
+| Sluggish economy hits German jobs |
+| Indonesians face fuel price rise |
+| Court rejects $280bn tobacco case |
+| Dollar gains on Greenspan speech |
+| Mixed signals from French economy |
+| Ask Jeeves tips online ad revival |
+| Rank 'set to sell off film unit' |
+| US trade gap hits record in 2004 |
+| India widens access to telecoms |
+|...|
 
 ## Output Data
 
-The latent topics identified are represented by the most significant words and their probabilities. It is similar to clustering in the sense that the words are grouped as topics and labeled unintuitively as topic 0, topic 1, etc. However, unlike clustering, the words have probabilities of relevance to the topic. Using these probabilities, only the top few words (10 in config.json) are used to represent a topic i.e., topic-word distribution.
-For the three topics:
+The latent topics identified are represented by the most significant words and their probabilities. It is similar to clustering in the sense that the words are grouped as topics and labeled un-intuitively as topic 1, topic 2, etc. However, unlike clustering, the words have probabilities of relevance to the topic. 
 
-| Topic Name | Words and Probabilities                                                                                   |
-|------------|----------------------------------------------------------------------------------------------------------|
-| Topic 0    | ('deal', 0.039125056962437336)('profit', 0.03261506412342946)('profits', 0.026105071284421584)('Japanese', 0.019595078445413708)('takeover', 0.01308508560640583)('lifts', 0.01308508560640583)("India's", 0.01308508560640583)('high', 0.01308508560640583)('Parmalat', 0.01308508560640583)('China', 0.01308508560640583)                             |
-| Topic 1    | ('economy', 0.04184945338068379)('hits', 0.03488614998955504)('fuel', 0.03488614998955504)('Yukos', 0.02792284659842629)('growth', 0.02792284659842629)('Japan', 0.02792284659842629)('German', 0.020959543207297537)('$280bn', 0.013996239816168788)('French', 0.013996239816168788)('prices', 0.013996239816168788)|
-| Topic 2    | ('jobs', 0.024660229998155092)('firm', 0.024660229998155092)('gets', 0.024660229998155092)('India', 0.018510546706844596)('sales', 0.018510546706844596)('new', 0.018510546706844596)('oil', 0.018510546706844596)('BMW', 0.018510546706844596)('trade', 0.012360863415534098)('rise', 0.012360863415534098)|
+**Topic-word distribution:** Topic word distribution provides the top few words for each topic with their probabilities, organized in decreasing order of their probabilities, indicating relevance to the topic. 
 
-The complete distribution is written to [data/output-data/topic-word-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/topic-word-distribution.txt)
+The following are 3 topics (`numTopics=3` in `config.json`) from the sample data, each with its top 10 words (`wordsPerTopic=10` in `config.json`) and their probabilities.
 
-Topic Distribution Per Document: Each document is assigned probabilities of representing a topic based on the topic association of its words. These probabilities indicate the extent to which each document relates to specific topics. For example, document 0 can be 45% topic 0, 45% topic 1, and 10% topic 2.
+|     | Topic 1 | Topic 2 | Topic 3 |
+|---------|---------|---------|---------|
+|	w1 | (new, 0.0158)	|(win, 0.009)	| (film, 0.0123) |
+|	w2 | (Blair, 0.0136)|	(deal, 0.0087) |	(set, 0.0089) |
+|	w3 | (hits, 0.0096)	| (show, 0.0087)	| (top, 0.008) |
+|	w4 | (net, 0.009)	| (shares, 0.0068)	| (hit, 0.0077) |
+|	w5 | (election, 0.0071)|	(plan, 0.0068)	| (wins, 0.0074) |
+|	w6 | (Labour, 0.0071)|	(firm, 0.0065)	| (return, 0.0071) |
+|	w7 | (growth, 0.0065)|	(China, 0.0065)	| (bid, 0.0071) |
+|	w8 | (face, 0.0062)	|( back, 0.0065)	| (gets, 0.0065) |
+|	w9 | (says, 0.0062)	| (takes, 0.0065)	| (Brown, 0.0065) |
+|	w10 | (row, 0.0062)	| (Yukos, 0.0062)	| (economy, 0.0061) |
 
-In case a reader is interested in only reading more about topic 0, he/she may only focus on the documents where topic 0 is the major topic.
+
+
+The complete distribution is written to [data/output-data/topic-word-distribution.tsv](data/output-data/topic-word-distribution.tsv)
+
+**Document-topic distribution:** Each document is assigned probabilities of representing a topic based on the topic association of its words. These probabilities indicate the extent to which the topics are discussed in these documents. For example, document 1 can be 37.5% topic 1, 25% topic 2, and 37.5% topic 3.
+
+In case a reader is interested in only reading more about topic 1, he/she may only focus on the documents where topic 1 is the major topic.
  
-| Document   | Topic 0                 | Topic 1                 | Topic 2             |
-|------------|-------------------------|-------------------------|---------------------|
-| Document 0 | 0.125                   | 0.5                    | 0.375                |
-| Document 1 | 0.375                   | 0.25                   | 0.375                |
-| Document 2 | 0.125                   | 0.75                   | 0.125                |
-| Document 3 | 0.375                   | 0.25                   | 0.375               |
-| Document 4 | 0.7142857142857143      | 0.14285714285714285     | 0.14285714285714285  |
-| Document 5 | 0.42857142857142855     | 0.2857142857142857     | 0.2857142857142857  |
-| Document 6 | 0.125                   | 0.375                     | 0.5               |
-| Document 7 | 0.25                   | 0.0.5                   | 0.25               |
-| Document 8 | 0.375                    | 0.375                   | 0.25               |
-| Document 9 | 0.14285714285714285     | 0.14285714285714285     | 0.7142857142857143 |
-| ...|
+|   |Topic 1   | Topic 2    | Topic 3  | Text                |
+|-----------|------------|----------|----------|---------------------|
+|	Doc 1   | 0.3750	| 0.2500	 | 0.3750	| India calls for fair trade rules |
+|	Doc 2   | 0.3750	| 0.2500	 | 0.3750	| Sluggish economy hits German jobs |
+|	Doc 3   | 0.3750	| 0.2500	 | 0.3750	| Indonesians face fuel price rise  |
+|	Doc 4   | 0.3750	| 0.3750	 | 0.2500	| Court rejects $280bn tobacco case |
+|	Doc 5   | 0.1429	| 0.2857	 | 0.5714	| Dollar gains on Greenspan speech |
+| ...       | 
 
-Written in file [data/output-data/document-topic-distribution.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/output-data/document-topic-distribution.txt)
+Written in file [data/output-data/document-topic-distribution.tsv](data/output-data/document-topic-distribution.tsv)
 
 ## Hardware Requirements
-The mehod runs on a cheap virtual machine provided by cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD).
+The method runs on a small virtual machine provided by a cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD).
 
 ## Environment setup
-It is the vanilla implementation of the Latent Dirichlet Allocation technique with everything built from scratch, therefore only basic libraries i.e., `numpy`, `pandas`, `random` and `string` are needed to read data and generate random numbers.
-- Update [config.json](config.json) to read method configurations in JSON format and update as desired. 
-- Setup the environment using [requirements.txt](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/requirements.txt) through command `pip install -r requirements.txt`
-- Put your data in [data/input.csv](data/input.csv)
-- Execute the notebook [LDA-collapsed-gibbs-sampling.ipynb](LDA-collapsed-gibbs-sampling.ipynb) to get results
+To set up the working environment, execute the command
+
+`pip install -r requirements.txt`
 
 ## How to Use
 - Put your data in [data/input.csv](https://github.com/taimoorkhan-nlp/latent_dirichlet_allocation/blob/master/data/input.csv)
