@@ -58,7 +58,7 @@ To avoid problems with your system's Python installation, create and activate a 
 
 Then install all requirements using:
 
-```{bash}
+```
 pip install -r requirements.txt
 ```
 
