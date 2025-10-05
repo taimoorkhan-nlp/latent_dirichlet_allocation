@@ -99,4 +99,4 @@ The Vanilla implementation offers higher transparency and thus more control over
 
 ## Contact details
 
-M. Taimoor Khan (<a href="mailto:taimoor.khan@gesis.org">taimoor.khan@gesis.org</a>)
+M. Taimoor Khan <taimoor.khan@gesis.org>
