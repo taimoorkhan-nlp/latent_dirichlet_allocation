@@ -75,25 +75,7 @@ The model starts with random initialization, i.e., the words are assigned to top
 
 The method has two hyperparameters, i.e., $\alpha$ as the Dirichlet prior for the document-topic distribution and $\beta$ as the Dirichlet prior for the topic-word distribution. This implementation uses the optimum values advised for the method. These Dirichlet priors control the bias or variance in the model's distribution. For example, when the $\alpha$ value is 1, the document-topic distribution is fully drawn from the input data without the prior affecting it. However, when its value is higher (generally in multiples of 10 as 100, 1000, ...), it introduces bias into the model. The high prior value undermines the probabilities computed from the data, and therefore, most topics have similar probabilities in a document. On the other hand, when the $\alpha$ is below 1 (i.e., 0.1, 0.001, ...), it increases variance, assigning more weight to the probabilities from within the data, resulting in only a few topics with higher probabilities in the document. Thus, $\alpha$ allows for controlling the number of topics represented in a document. The Dirichlet prior $\beta$ plays a similar role in the topic-word distribution.
 
-Topic modeling is also a soft clustering approach (derived from the concept of soft sets in mathematics), as all words belong to all topics and all topics belong to all documents with varying probabilities. However, for the sake of clarity, only higher probabilities are considered. Thus, in general, words having a higher probability for a topic have lower probabilities for all other topics, except for **polysemous words**. They can be among the highest probability words for multiple topics, where each occurrence is surrounded by its contextually correlated words.  
-
-Topic models are generally represented by a plate-notation diagram as shown below [source](https://images.prismic.io/rosetta-marketing-website/9ee5d938-d009-4fcd-88c8-7bd539391da1_image+%2848%29.png?auto=compress,format). The rectangles (also called plates in the diagram) represent loops, while the circles represent variables. The $\alpha$ and $\beta$ priors are consumed by $\Theta$ and $\Phi$ representing document-topic and topic-word distributions, respectively. *W* represents the sampled word, while *Z* is the topic assigned to it. *K*, *M*, and *N* are the loop stopping conditions representing the number of topics, the number of documents in the corpus, and the number of words in the topics, respectively. It can also be observed that among all variables, only *W* has a gray background, as it is the only known variable. 
-
-$\Theta_{d, t} = \frac{\eta_{d, t}^{-} + \alpha}{\sum_{k}^{K} \eta_{d,k}^{-} + K\alpha}$ 
-
-and
-
-$\Phi_{t, w} = \frac{\eta_{t, w}^{-} + \beta}{\sum_{v}^{V} \eta_{t,v}^{-} + V\beta}$
-
-$P(z = t | z_-, w, d, .) = \Theta_{d, t} \times \Phi_{t, w}$
-
-Where, *w* is the sampled word from *d*^{th} document, whose probability is computed for topic *t* in $\Theta_{d, t}$. The denominator normalizes the probabilities, having *K* as the total number of topics. $\Phi_{t, w}$ computes the probability of word *w* for topic *t*, where *V* is the vocabulary size. $\eta$ represents frequency e.g., $\eta_{d,t}$ means the number of times topic *t* appears in document *d*. While *-* is for excluding the scores of the sampled word to avoid bias in favor of the present topic.
-
-
-<img src="https://images.prismic.io/rosetta-marketing-website/9ee5d938-d009-4fcd-88c8-7bd539391da1_image+%2848%29.png?auto=compress,format" alt="Alt Text" width="300" height="200">
-  
-
-The Vanilla implementation offers higher transparency and thus more control over the internal decisions of the method. 
+The Vanilla implementation offers higher transparency and thus more control over the internal decisions of the method. However, for big data one should use a more efficient library.
 
 ## Contact details
 
