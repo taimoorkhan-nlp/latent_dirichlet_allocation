@@ -52,7 +52,7 @@ Each row in the topic-word distribution file contains for each topic a word and 
 
 The method runs on a small virtual machine provided by a cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD).
 
-## Environment setup
+## Environment Setup
 
 To avoid problems with your system's Python installation, create and activate a [virtual environment](https://docs.python.org/3/library/venv.html).
 
@@ -76,6 +76,9 @@ The model starts with random initialization, i.e., the words are assigned to top
 The method has two hyperparameters, i.e., $\alpha$ as the Dirichlet prior for the document-topic distribution and $\beta$ as the Dirichlet prior for the topic-word distribution. This implementation uses the optimum values advised for the method. These Dirichlet priors control the bias or variance in the model's distribution. For example, when the $\alpha$ value is 1, the document-topic distribution is fully drawn from the input data without the prior affecting it. However, when its value is higher (generally in multiples of 10 as 100, 1000, ...), it introduces bias into the model. The high prior value undermines the probabilities computed from the data, and therefore, most topics have similar probabilities in a document. On the other hand, when the $\alpha$ is below 1 (i.e., 0.1, 0.001, ...), it increases variance, assigning more weight to the probabilities from within the data, resulting in only a few topics with higher probabilities in the document. Thus, $\alpha$ allows for controlling the number of topics represented in a document. The Dirichlet prior $\beta$ plays a similar role in the topic-word distribution. For more on its working, please refer to the original contribution [1] and its collapsed Gibbs sampling variant [2].
 
 The Vanilla implementation offers higher transparency and thus more control over the internal decisions of the method. However, for big data one should use a more efficient library.
+
+##
+For any queries, please contact Taimoor Khan (taimoor.khan@gesis.org)
 
 ## References
 [1] Blei, D. M., Ng, A. Y., & Jordan, M. I. (2003). Latent dirichlet allocation. Journal of machine Learning research, 3(Jan), 993-1022.
