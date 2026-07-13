@@ -77,13 +77,12 @@ The method has two hyperparameters, i.e., $\alpha$ as the Dirichlet prior for th
 
 The Vanilla implementation offers higher transparency and thus more control over the internal decisions of the method. However, for big data one should use a more efficient library.
 
-##
 For any queries, please contact Taimoor Khan (taimoor.khan@gesis.org)
 
 ## References
 [1] Blei, D. M., Ng, A. Y., & Jordan, M. I. (2003). Latent dirichlet allocation. Journal of machine Learning research, 3(Jan), 993-1022.
 [2] Porteous, I., Newman, D., Ihler, A., Asuncion, A., Smyth, P., & Welling, M. (2008, August). Fast collapsed gibbs sampling for latent dirichlet allocation. In Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 569-577).
 
-## Contact details
+## Contact Details
 
 M. Taimoor Khan <taimoor.khan@gesis.org>
